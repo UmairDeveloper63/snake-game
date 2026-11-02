@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101820, #172b25);
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    background: #1c2927;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #65e572;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b5c9bd;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.score-box {
+    flex: 1;
+    background: #263a32;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.score-box span {
+    display: block;
+    color: #b5c9bd;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.score-box strong {
+    font-size: 24px;
+    color: #65e572;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    border: 3px solid #65e572;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #101c19;
+}
+
+.message-screen {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 20, 0.91);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.message-screen h2 {
+    color: #65e572;
+    font-size: 27px;
+}
+
+.message-screen p {
+    color: #d2e0d5;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#start-btn,
+.restart-btn {
+    background: #65e572;
+    color: #102018;
+    padding: 12px 25px;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.instructions {
+    color: #b5c9bd;
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+.mobile-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.middle-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    width: 52px;
+    height: 45px;
+    border-radius: 10px;
+    background: #31483b;
+    color: white;
+    font-size: 20px;
+    touch-action: manipulation;
+}
+
+.control-btn:active {
+    background: #65e572;
+    color: #102018;
+}
+
+.restart-btn {
+    background: #31483b;
+    color: white;
+}
+
+@media (min-width: 700px) {
+    .mobile-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}

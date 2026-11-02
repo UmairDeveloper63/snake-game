@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🐍 Snake Game</h1>
+        <p class="subtitle">Eat food. Grow longer. Beat your best!</p>
+
+        <div class="score-board">
+            <div class="score-box">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+            <div class="score-box">
+                <span>Best Score</span>
+                <strong id="best-score">0</strong>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="game-board" width="400" height="400"></canvas>
+
+            <div id="message-screen" class="message-screen">
+                <h2 id="message-title">Ready to Play?</h2>
+                <p id="message-text">Press Start to begin your game!</p>
+                <button id="start-btn">Start Game</button>
+            </div>
+        </div>
+
+        <p class="instructions">
+            Use Arrow Keys or WASD to move
+        </p>
+
+        <div class="mobile-controls">
+            <button class="control-btn up" data-direction="up">▲</button>
+            <div class="middle-controls">
+                <button class="control-btn" data-direction="left">◀</button>
+                <button class="control-btn" data-direction="down">▼</button>
+                <button class="control-btn" data-direction="right">▶</button>
+            </div>
+        </div>
+<button id="pause-btn" class="restart-btn">Pause Game</button>
+        <button id="restart-btn" class="restart-btn">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
